@@ -1,11 +1,11 @@
-# [SprCpu](https://t.me/SPRCPU_Company)
+# [PrimeTeam](https://t.me/PrimeTeam) AntiSpamPlus
  **A Professional Telegram-BOT Based on [Telegram-Cli](https://valtman.name/Telegram-cli) for Manage your Groups Easy !**
  
 # Installation !
   ```sh
     #First Clone our Project !
-   git clone https://github.com/SPR-CPU-ORG/F80 -b Beta
-    cd F80
+   git clone https://github.com/SorBlackPlus/AntiSpamPlus -b Beta
+    cd AntiSpamPlus
     #Lets install Reqires !
     chmod 777 Install.sh
     ./Install.sh 
@@ -57,25 +57,15 @@ end
 | Will Update Soon | !|
 
 ## Support 
-  Telegram Group : [Join](https://t.me/joinchat/AAAAAD_jMhe7zLbBo1ycLg)
-  ReloadLife : [Telegram](https://t.me/Reload_LifeBOT)
-  Arisharr Najafi : [Telegram](https://t.me/Arisharr) 
+  Telegram Group : [Join](https://t.me/joinchat/AAAAAEIIFrX5TQkoIuDBBQ)
+  SorBlack : [Telegram](https://t.me/SorBlack)
+  iam_nagin : [Telegram](https://t.me/Iam_nagin) 
 ## Our Team !
 
-   **ReloadLife** [GitHub](github.com/Reload-Life) [Telegram](https://T.me/Reload_Life) 
+   **SorBlack** [GitHub](github.com/SorBlackPlus) [Telegram](https://T.me/SorBlack) 
   
-   **ArisharrNajafi** [GitHub](github.com/Arisharr) [Telegram](https://T.me/Arisharr) 
+   **Iam_Negin** [Telegram](https://T.me/iam_nagin) 
   
-   **WebShark25** [GitHub](github.com/WebShark025) [Telegram](https://T.me/WebShark25) 
-  
-   **Alireza** [Telegram](https://T.me/DonRabbit)
-  
-   **Our WebSite** : [Spr-Cpu.ir](http://Spr-Cpu.ir)
-   
- ### Special Thanks 
-  **Vysheng** _for_ [Telegram-Cli-1222](Https://Valtman.name/Telegram-cli)
-  
-  **Rizaumami** _for_ [Telegram-cli-Libs](https://github.com/rizaumami/tdcli.lua) 
-  
-  & My Other Friends ! :-)
+   **Our WebSite** : [LovelyCreation](http://LovelyCreation,blogfa.ir)
+
 # Dont Forgot To Star Our Project :))
