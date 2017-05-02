@@ -49,7 +49,7 @@ if [ "$1" = "install" ]; then
   install_rocks
 else
   while true; do
-    ./Bot/Telegram-cli/Telegram-Cli -p F80Bot -s ./Bot/Bot.lua
+    ./Bot/Telegram-cli/Telegram-Cli -p AntiSpamPlus -s ./Bot/Bot.lua
     sleep 5s
   done
 fi
