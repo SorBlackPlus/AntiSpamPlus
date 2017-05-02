@@ -17,7 +17,7 @@ function Run(msg, matches)
 	stng = redis:hgetall(chat_id)
     chat_id2 = chat_id
     expireTime = Expire(chat_id)
-	text2 = '*Chat Settings for* : ['.. (stng.name or '') ..'](spr-cpu.ir) :\n'
+	text2 = '*Chat Settings for* : ['.. (stng.name or '') ..'](lovelyCreation.blogfa.ir) :\n'
 	..'> *'..lang.Lang(chat_id, 'Settings:41')..'* : `'..(stng.APIMOD or 'Unlock')..'`\n'
 	..'> *'..lang.Lang(chat_id, 'Settings:37')..'* : `'..(redis:get('lang:'..chat_id2) or 'en'):upper()..'`\n'
 	..'> *'..lang.Lang(chat_id, 'Settings:38')..'* : `'..(redis:get('cmdlang:'..chat_id2) or 'en'):upper()..'`\n'
