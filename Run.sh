@@ -1,4 +1,4 @@
-cd $home/F80
+cd $home/AnitSpamPlus
 figlet Running
 figlet SprCpu Company
-./TGCLI -p F80Bot -s ./Run/Bot.lua
+./TGCLI -p AntiSpamPlus -s ./Run/Bot.lua
