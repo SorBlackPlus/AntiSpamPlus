@@ -1,6 +1,6 @@
 do
 local _ = {
-	APiToken = '00000000:XXXXXXXXXXXXXXXXXXX',
+	APiToken = '191348669:AAEm_GTZEdK6jC9e89kw3t3rIkRNHA5Mb3M',
 	Plugins = {
 		'Main',
 		'set',
@@ -13,9 +13,7 @@ local _ = {
 	},
 	Sudos = {
 		--Put Sudo ID
-		000000000,
-		000000000,
-		0
+		93365812
 	}
 }
 return _
