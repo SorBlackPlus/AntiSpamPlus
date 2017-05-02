@@ -135,7 +135,6 @@ function show_logo_slowly() {
 }
 
 function show_logo() {
-     SprCpu
 }
 
 case $1 in
