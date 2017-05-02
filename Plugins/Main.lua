@@ -284,7 +284,7 @@ function Inline(arg, data)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'Admin:3')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:sadd('F80:admins', user_id)
+            redis:sadd('AntiSpamPlus:admins', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'Admin:4')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -294,7 +294,7 @@ function Inline(arg, data)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'AdminD:1')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:srem('F80:admins', user_id)
+            redis:srem('AntiSpamPlus:admins', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'AdminD:2')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -307,7 +307,7 @@ function Inline(arg, data)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'Sudo:2')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:sadd('F80:sudo', user_id)
+            redis:sadd('AntiSpamPlus:sudo', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'Sudo:3')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -317,7 +317,7 @@ function Inline(arg, data)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'SudoD:1')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:srem('F80:sudo', user_id)
+            redis:srem('AntiSpamPlus:sudo', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'SudoD:2')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -550,7 +550,7 @@ local function ID_(extra, results)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'AdminD:1')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:srem('F80:admins', user_id)
+            redis:srem('AntiSpamPlus:admins', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'AdminD:2')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -684,7 +684,7 @@ local function ID_(extra, results)
       ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..msg.user_.first_name_..'](t.me/'..(msg.user_.username_ or 'PrimeTeam')..')'
     tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 135727521,
+      bot_user_id_ = 191348669,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -940,7 +940,7 @@ local function ID_(extra, results)
         ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..results.user_.first_name_..'](t.me/'..(results.user_.username_ or 'PrimeTeam')..')'
       tdcli_function({
         ID = "GetInlineQueryResults",
-        bot_user_id_ = 135727521,
+        bot_user_id_ = 191348669,
         chat_id_ = chat_id,
         user_location_ = {
           ID = "Location",
@@ -968,7 +968,7 @@ local function ID_(extra, results)
   --------------------------
 --[[
     $## EnD CallBacks ##$
-    ## @Reload_Life ##
+    ## @SorBlack ##
     ## Last Update ;)
 ]]
 function run(msg, matches)
@@ -996,7 +996,7 @@ function run(msg, matches)
     ]]
     tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 135727521,
+      bot_user_id_ = 191348669,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -1061,15 +1061,15 @@ function run(msg, matches)
     api.sendMessage(Realm, RLM, 'html', keyboard, 0, false)
     text = [[ *---------
 شارژ گروه به پایان رسید !*
-برای شارژ به [اینجا](t.me/PrimeStoreBot?start=] ].. chat_id ..[[ChargeReq)* مراجعه کنید !*
+برای شارژ به [اینجا](t.me/PrimeHelpBot?start=] ].. chat_id ..[[ChargeReq)* مراجعه کنید !*
 *---------------
 Group Expired !
-Click* [Here](t.me/PrimeStoreBot?start=] ].. chat_id ..[[ChargeReq) *To Charge !*
+Click* [Here](t.me/PrimeHelpBot?start=] ].. chat_id ..[[ChargeReq) *To Charge !*
     ---------] ]
 
     tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 107705060,
+      bot_user_id_ = 191348669,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -1122,7 +1122,7 @@ Click* [Here](t.me/PrimeStoreBot?start=] ].. chat_id ..[[ChargeReq) *To Charge !
       ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..msg.user_.name_..'](t.me/'..(msg.user_.username_ or 'PrimeTeam')..')'
     tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 135727521,
+      bot_user_id_ = 191348669,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -1784,7 +1784,7 @@ Click* [Here](t.me/PrimeStoreBot?start=] ].. chat_id ..[[ChargeReq) *To Charge !
         end
         tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 135727521,
+      bot_user_id_ = 191348669,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -2048,7 +2048,7 @@ Click* [Here](t.me/PrimeStoreBot?start=] ].. chat_id ..[[ChargeReq) *To Charge !
         end
         tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 135727521,
+      bot_user_id_ = 191348669,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -2077,7 +2077,7 @@ Click* [Here](t.me/PrimeStoreBot?start=] ].. chat_id ..[[ChargeReq) *To Charge !
         end
         tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 135727521,
+      bot_user_id_ = 191348669,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -2380,7 +2380,7 @@ Click* [Here](t.me/PrimeStoreBot?start=] ].. chat_id ..[[ChargeReq) *To Charge !
         end
            tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 135727521,
+      bot_user_id_ = 191348669,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
