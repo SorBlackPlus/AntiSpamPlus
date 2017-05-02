@@ -135,6 +135,7 @@ function show_logo_slowly() {
 }
 
 function show_logo() {
+    figlet SprCpu Company
 }
 
 case $1 in
