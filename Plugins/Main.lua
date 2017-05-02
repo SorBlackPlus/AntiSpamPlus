@@ -197,7 +197,7 @@ function Inline(arg, data)
       ---
 --[[
     $## StarT CallBacks ##$
-    ## @Reload_Life ##
+    ## @SorBlack ##
     ## Last Update ;)
 ]]
   --------------------------
@@ -428,10 +428,10 @@ local function ID_(extra, results)
          text = '`>` *'..lang.Lang(chat_id, 'ID:1')..'* : `'..chat_id:gsub('-100','')..'`\n'
         ..'`>` *'..lang.Lang(chat_id, 'ID:2')..'* : `'..user_id..'`\n'
         ..'`>` *'..lang.Lang(chat_id, 'ID:3')..'* : `@'..(results.user_.username_ or '`NoUserName`')..'`\n'
-        ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..results.user_.first_name_..'](t.me/'..(results.user_.username_ or 'sprcpu_company')..')'
+        ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..results.user_.first_name_..'](t.me/'..(results.user_.username_ or 'PrimeTeam')..')'
       tdcli_function({
         ID = "GetInlineQueryResults",
-        bot_user_id_ = 107705060,
+        bot_user_id_ = 135727521,
         chat_id_ = chat_id,
         user_location_ = {
           ID = "Location",
@@ -563,7 +563,7 @@ local function ID_(extra, results)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'Sudo:2')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:sadd('F80:sudo', user_id)
+            redis:sadd('AntiSpamPlus:sudo', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'Sudo:3')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -573,7 +573,7 @@ local function ID_(extra, results)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'SudoD:1')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:srem('F80:sudo', user_id)
+            redis:srem('AntiSpamPlus:sudo', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'SudoD:2')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -681,10 +681,10 @@ local function ID_(extra, results)
        text = '`>` *'..lang.Lang(chat_id, 'ID:1')..'* : `'..chat_id:gsub('-100','')..'`\n'
       ..'`>` *'..lang.Lang(chat_id, 'ID:2')..'* : `'..user_id..'`\n'
       ..'`>` *'..lang.Lang(chat_id, 'ID:3')..'* : `@'..(msg.user_.username_ or '`NoUserName`')..'`\n'
-      ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..msg.user_.first_name_..'](t.me/'..(msg.user_.username_ or 'sprcpu_company')..')'
+      ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..msg.user_.first_name_..'](t.me/'..(msg.user_.username_ or 'PrimeTeam')..')'
     tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 107705060,
+      bot_user_id_ = 135727521,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -793,7 +793,7 @@ local function ID_(extra, results)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'Admin:3')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:sadd('F80:admins', user_id)
+            redis:sadd('AntiSpamPlus:admins', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'Admin:4')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -803,7 +803,7 @@ local function ID_(extra, results)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'AdminD:1')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:srem('F80:admins', user_id)
+            redis:srem('AntiSpamPlus:admins', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'AdminD:2')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -816,7 +816,7 @@ local function ID_(extra, results)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'Sudo:2')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:sadd('F80:sudo', user_id)
+            redis:sadd('AntiSpamPlus:sudo', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'Sudo:3')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -826,7 +826,7 @@ local function ID_(extra, results)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'SudoD:1')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           else
-            redis:srem('F80:sudo', user_id)
+            redis:srem('AntiSpamPlus:sudo', user_id)
             text = '> '.. user ..' '.. lang.Lang(chat_id, 'SudoD:2')
             sendmetion(chat_id, user_id, msg_id, text, 2, string.len(user))
           end
@@ -937,10 +937,10 @@ local function ID_(extra, results)
          text = '`>` *'..lang.Lang(chat_id, 'ID:1')..'* : `'..chat_id:gsub('-100','')..'`\n'
         ..'`>` *'..lang.Lang(chat_id, 'ID:2')..'* : `'..user_id..'`\n'
         ..'`>` *'..lang.Lang(chat_id, 'ID:3')..'* : `@'..(results.user_.username_ or '`NoUserName`')..'`\n'
-        ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..results.user_.first_name_..'](t.me/'..(results.user_.username_ or 'sprcpu_company')..')'
+        ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..results.user_.first_name_..'](t.me/'..(results.user_.username_ or 'PrimeTeam')..')'
       tdcli_function({
         ID = "GetInlineQueryResults",
-        bot_user_id_ = 107705060,
+        bot_user_id_ = 135727521,
         chat_id_ = chat_id,
         user_location_ = {
           ID = "Location",
@@ -996,7 +996,7 @@ function run(msg, matches)
     ]]
     tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 107705060,
+      bot_user_id_ = 135727521,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -1061,10 +1061,10 @@ function run(msg, matches)
     api.sendMessage(Realm, RLM, 'html', keyboard, 0, false)
     text = [[ *---------
 شارژ گروه به پایان رسید !*
-برای شارژ به [اینجا](t.me/Question_Robot?start=] ].. chat_id ..[[ChargeReq)* مراجعه کنید !*
+برای شارژ به [اینجا](t.me/PrimeStoreBot?start=] ].. chat_id ..[[ChargeReq)* مراجعه کنید !*
 *---------------
 Group Expired !
-Click* [Here](t.me/Question_Robot?start=] ].. chat_id ..[[ChargeReq) *To Charge !*
+Click* [Here](t.me/PrimeStoreBot?start=] ].. chat_id ..[[ChargeReq) *To Charge !*
     ---------] ]
 
     tdcli_function({
@@ -1119,10 +1119,10 @@ Click* [Here](t.me/Question_Robot?start=] ].. chat_id ..[[ChargeReq) *To Charge 
        text = '`>` *'..lang.Lang(chat_id, 'ID:1')..'* : `'..chat_id:gsub('-100','')..'`\n'
       ..'`>` *'..lang.Lang(chat_id, 'ID:2')..'* : `'..user_id..'`\n'
       ..'`>` *'..lang.Lang(chat_id, 'ID:3')..'* : `@'..(msg.user_.username_ or 'NoUserName')..'`\n'
-      ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..msg.user_.name_..'](t.me/'..(msg.user_.username_ or 'sprcpu_company')..')'
+      ..'`>` *'..lang.Lang(chat_id, 'ID:4')..'* : ['..msg.user_.name_..'](t.me/'..(msg.user_.username_ or 'PrimeTeam')..')'
     tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 107705060,
+      bot_user_id_ = 135727521,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -1784,7 +1784,7 @@ Click* [Here](t.me/Question_Robot?start=] ].. chat_id ..[[ChargeReq) *To Charge 
         end
         tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 107705060,
+      bot_user_id_ = 135727521,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -2048,7 +2048,7 @@ Click* [Here](t.me/Question_Robot?start=] ].. chat_id ..[[ChargeReq) *To Charge 
         end
         tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 107705060,
+      bot_user_id_ = 135727521,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -2077,7 +2077,7 @@ Click* [Here](t.me/Question_Robot?start=] ].. chat_id ..[[ChargeReq) *To Charge 
         end
         tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 107705060,
+      bot_user_id_ = 135727521,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -2113,7 +2113,7 @@ Click* [Here](t.me/Question_Robot?start=] ].. chat_id ..[[ChargeReq) *To Charge 
         stng = redis:hgetall(chat_id)
         chat_id2 = chat_id
         expireTime = Expire(chat_id)
-       text2 = '*Chat Settings for* : ['.. (stng.name or '') ..'](spr-cpu.ir) :\n'
+       text2 = '*Chat Settings for* : ['.. (stng.name or '') ..'](LovelyCreation.blogfa.ir) :\n'
 	..'> *'..lang.Lang(chat_id, 'Settings:41')..'* : `'..(stng.APIMOD or 'Unlock')..'`\n'
 	..'> *'..lang.Lang(chat_id, 'Settings:37')..'* : `'..(redis:get('lang:'..chat_id2) or 'en'):upper()..'`\n'
 	..'> *'..lang.Lang(chat_id, 'Settings:38')..'* : `'..(redis:get('cmdlang:'..chat_id2) or 'en'):upper()..'`\n'
@@ -2353,8 +2353,8 @@ Click* [Here](t.me/Question_Robot?start=] ].. chat_id ..[[ChargeReq) *To Charge 
 	    },
 	    --
 	    {
-	        {text = "OurChannel🙄", url = 't.me/sprcpu_company'},
-	        {text = "Support🙄", url = 't.me/Question_Robot?start=Support'},
+	        {text = "OurChannel🙄", url = 't.me/PrimeTeam'},
+	        {text = "Support🙄", url = 't.me/PmSorBlackBot?start='},
         }
     	}
 
@@ -2380,7 +2380,7 @@ Click* [Here](t.me/Question_Robot?start=] ].. chat_id ..[[ChargeReq) *To Charge 
         end
            tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 107705060,
+      bot_user_id_ = 135727521,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
