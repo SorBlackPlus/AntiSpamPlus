@@ -112,7 +112,7 @@ function configure() {
 }
 
 function start_bot() {
-    ./TGCLI -p F80Bot ./Run/Bot.lua $@
+    ./TGCLI -p AntiSpamPlus ./Run/Bot.lua $@
 }
 
 function show_logo_slowly() {
@@ -135,7 +135,7 @@ function show_logo_slowly() {
 }
 
 function show_logo() {
-     SprCpu Company
+   
 }
 
 case $1 in
