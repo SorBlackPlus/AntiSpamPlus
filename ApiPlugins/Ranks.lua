@@ -30,7 +30,7 @@
                 end
                 --RMkUp = RMkUp..']]'
                 RLTSD = 'https://api.telegram.org/bot' .. _Config.APiToken 
-                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/sprcpu_company"}]]}'
+                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/PrimeTeam"}]]}'
                 https.request(RLTSD)
 			end
 		end
@@ -56,7 +56,7 @@
                 end
                 --RMkUp = RMkUp..']]'
                 RLTSD = 'https://api.telegram.org/bot' .. _Config.APiToken 
-                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/sprcpu_company"}]]}'
+                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/PrimeTeam"}]]}'
                 https.request(RLTSD)
 			end
 		end
@@ -78,7 +78,7 @@
                 end
                 --RMkUp = RMkUp..']]'
                 RLTSD = 'https://api.telegram.org/bot' .. _Config.APiToken 
-                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/sprcpu_company"}]]}'
+                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/PrimeTeam"}]]}'
                 https.request(RLTSD)
 			end
 		end
@@ -100,14 +100,14 @@
                 end
                 --RMkUp = RMkUp..']]'
                 RLTSD = 'https://api.telegram.org/bot' .. _Config.APiToken 
-                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/sprcpu_company"}]]}'
+                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/PrimeTeam"}]]}'
                 https.request(RLTSD)
 			end
 		end
 		if matches[1] == 'DemAdmin' then
 			if rank.isSudo(msg.from.id) then
-			redis:srem('F80:admins', user_id)
-				hash = 'F80:admins'
+			redis:srem('AntiSpamPlus:admins', user_id)
+				hash = 'AntiSpamPlus:admins'
                 list = redis:smembers(hash)
                 if redis:scard(hash) > 0 then
                 	text = lang.Lang(chat_id, 'list:admins'):format(redis:hget(chat_id, 'name'))
@@ -122,14 +122,14 @@
                 end
                 --RMkUp = RMkUp..']]'
                 RLTSD = 'https://api.telegram.org/bot' .. _Config.APiToken 
-                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/sprcpu_company"}]]}'
+                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/PrimeTeam"}]]}'
                 https.request(RLTSD)
 			end
 		end
 		if matches[1] == 'DemSudo' then
 			if rank.isSudo(msg.from.id) then
-			redis:srem('F80:sudos', user_id)
-				hash = 'F80:sudos'
+			redis:srem('AntiSpamPlus:sudos', user_id)
+				hash = 'AntiSpamPlus:sudos'
                 list = redis:smembers(hash)
                 if redis:scard(hash) > 0 then
                 	text = lang.Lang(chat_id, 'list:sudos'):format(redis:hget(chat_id, 'name'))
@@ -146,7 +146,7 @@
                 end
                 --RMkUp = RMkUp..']]'
                  RLTSD = 'https://api.telegram.org/bot' .. _Config.APiToken 
-                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/sprcpu_company"}]]}'
+                ..'/editMessageText?chat_id='..msg.message.chat.id..'&message_id='..msg.message.message_id..'&text='..URL.escape(text)..'&parse_mode=Markdown'..RMkUp..'[{"text":"'.. 'OurChannel🙄' ..'","url":"t.me/PrimeTeam"}]]}'
                 https.request(RLTSD)
 			end
 		end
