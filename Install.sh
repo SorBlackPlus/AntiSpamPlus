@@ -68,7 +68,7 @@ function download_libs_lua() {
     local i
     for ((i=0;i<${#lualibs[@]};i++)); do
         printf "\r\33[2K"
-        printf "\rF80: wait... [`make_progress $(($i+1)) ${#lualibs[@]}`%%] [$(($i+1))/${#lualibs[@]}] ${lualibs[$i]}"
+        printf "\rAntiSpamPlus: wait... [`make_progress $(($i+1)) ${#lualibs[@]}`%%] [$(($i+1))/${#lualibs[@]}] ${lualibs[$i]}"
         ./.luarocks/bin/luarocks install ${lualibs[$i]} &>> logs/logluarocks_${today}.txt
     done
     sleep 0.2
