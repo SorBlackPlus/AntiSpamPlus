@@ -5,7 +5,7 @@
 		if rank.is_Sudo(msg) then
 			if matches[1]:lower() == 'plugins' then
 				text = 'Plugins List : \n'
-				for v, plugins in pairs(redis:smembers('F80:Plugins')) do
+				for v, plugins in pairs(redis:smembers('AntiSpamPlus:Plugins')) do
 					text = text..'- `'..v..'` ) *'..plugins..'* \n'
 				end
           	cli.sendText(msg.chat_id_, msg.id_, 0, 0, nil, text, 0, 'MarkDown')
@@ -38,8 +38,8 @@
 				lang.set_text(LANG, 'list:exadminsE', '\n----------------\nهیچ مدیر اصلی وجود ندارد')
             	lang.set_text(LANG, 'list:muted', 'لیست کاربر های در حالت سکوت گروه :\n')
 				lang.set_text(LANG, 'list:mutedE', 'هیچ کاربری در حالت سکوت قرار ندارد ')
-				lang.set_text(LANG, 'list:sudos', 'لیست سودو های F80 :\n')
-				lang.set_text(LANG, 'list:admins', 'لیست ادمین های جهانی F80 :\n')
+				lang.set_text(LANG, 'list:sudos', 'لیست سودو های AntiSpamPlus :\n')
+				lang.set_text(LANG, 'list:admins', 'لیست ادمین های جهانی AntiSpamPlus :\n')
 				lang.set_text(LANG, 'list:bots', 'لیست ربات های داخل گروه :\n')
             	lang.set_text(LANG, 'list:filterd', 'لیست کلمات سانسور شده گروه :\n')
 				lang.set_text(LANG, 'list:filterdE', 'هیچ کلمه ای فیلتر نشده')
@@ -144,79 +144,79 @@
    				lang.set_text(LANG, 'Unlock:edit:f', '> *خطا* _ویرایش پیام ها قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:edit:d', '> _قفل بودن ویرایش پیام ها غیر فعال شد_')
    				lang.set_text(LANG, 'lock:pin:f', '> *خطا* _سنجاق زدن پیام ها قفل میباشد_')
-   				lang.set_text(LANG, 'lock:pin:d', '> _سنجاق زدن پیام ها قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:pin:d', '> _سنجاق زدن پیام ها قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:pin:f', '> *خطا* _سنجاق زدن پیام ها قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:pin:d', '> _قفل بودن سنجاق زدن پیام ها غیر فعال شد_')
    				lang.set_text(LANG, 'lock:flood:f', '> *خطا*\n`>`_پیام سریع قفل میباشد..._')
-   				lang.set_text(LANG, 'lock:flood:d', '> _پیام سریع قفل میباشد_\n[این چیه?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:flood:d', '> _پیام سریع قفل میباشد_\n[این چیه?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:flood:f', '> *خطا* _پیام سریع قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:flood:d', '> _پیام سریع ازاد شد_')
    				lang.set_text(LANG, 'lock:longmessage:f', '> *خطا*\n`>`فرستادن *پیام طولانی* _بیشتر از _: `%d`_ قفل میباشد..._')
-   				lang.set_text(LANG, 'lock:longmessage:d', '> ارسال *پیام طولانی* _بیشتر از _: `%d`_ قفل میبشاد..._\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:longmessage:d', '> ارسال *پیام طولانی* _بیشتر از _: `%d`_ قفل میبشاد..._\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:longmessage:f', '> *خطا* _ارسال پیام طولانی قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:longmessage:d', '> _ارسال پیام طولانی  باز شد_')
    				lang.set_text(LANG, 'lock:shortmessage:f', '> *خطا*\n`>`_ارسال_ *پیام کوتاه* _کمتر _: `%d`_ قفل میباشد..._')
-   				lang.set_text(LANG, 'lock:shortmessage:d', '> _ارسال_ *پیام کوتاه* _کمتر از _: `%d`_ قفل شده..._\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:shortmessage:d', '> _ارسال_ *پیام کوتاه* _کمتر از _: `%d`_ قفل شده..._\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:shortmessage:f', '> *خطا* _ارسال پیام کوتاه قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:shortmessage:d', '> _ارسال پیام کوتاه ازاد شد_')
    				lang.set_text(LANG, 'lock:caption:f', '> *خطا*\n_زیرنویس در حال حاضر قفل میباشد_')
-   				lang.set_text(LANG, 'lock:caption:d', '> _زیرنویس در حال حاضر قفل میباشد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:caption:d', '> _زیرنویس در حال حاضر قفل میباشد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:caption:f', '> *خطا* _زیرنویس قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:caption:d', '> _زیرنویس ازاد شد_')
    				lang.set_text(LANG, 'lock:forward:f', '> *خطا*\n _فوروارد پیام قفل میباشد_')
-   				lang.set_text(LANG, 'lock:forward:d', '> _فوروارد پیام قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:forward:d', '> _فوروارد پیام قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:forward:f', '> *خطا* _فوروارد پیام قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:forward:d', '> _فوروارد پیام ازاد شد_')
    				lang.set_text(LANG, 'lock:channelforward:f', '> *خطا*\n _فوروارد پیام از کانال قفل میباشد_')
-   				lang.set_text(LANG, 'lock:channelforward:d', '> _فوروارد پیام قفل شد_\n[این چیه?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:channelforward:d', '> _فوروارد پیام قفل شد_\n[این چیه?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:channelforward:f', '> *خطا* _فوروارد پیام از کانال ازاد میباشد_')
    				lang.set_text(LANG, 'Unlock:channelforward:d', '> _فوروارد پیام از کانال ازاد شد_')
    				lang.set_text(LANG, 'lock:userforward:f', '> *خطا*\n _فوروارد پیام از کاربر ها (نه کانال ها) قفل میباشد_')
-   				lang.set_text(LANG, 'lock:userforward:d', '> _فوروارد پیام از کاربر ها قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:userforward:d', '> _فوروارد پیام از کاربر ها قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:userforward:f', '> *خطا* _فوروارد پیام از کاربر ها ازاد میباشد_')
    				lang.set_text(LANG, 'Unlock:userforward:d', '> _فوروارد پیام از کاربران ازاد شد_')
    				lang.set_text(LANG, 'lock:reply:f', '> *خطا*\n _پاسخ به پیام ها قفل میباشد_')
-   				lang.set_text(LANG, 'lock:reply:d', '> _پاسخ بر روی پیام ها قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:reply:d', '> _پاسخ بر روی پیام ها قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:reply:f', '> *خطا* _پاسخ به پیام ها قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:reply:d', '> _پاسخ به پیام ها قفل نمیباشد_')
    				lang.set_text(LANG, 'lock:inline:f', '> *خطا*\n _درون خطی قفل میباشد_')
-   				lang.set_text(LANG, 'lock:inline:d', '> _درون خطی قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:inline:d', '> _درون خطی قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:inline:f', '> *خطا* _درون خطی قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:inline:d', '> _درون خطی ازاد شد_')
    				lang.set_text(LANG, 'lock:game:f', '> *خطا*\n _بازی درون خطی قفل میباشد_')
-   				lang.set_text(LANG, 'lock:game:d', '> _بازی درون خطی قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:game:d', '> _بازی درون خطی قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:game:f', '> *خطا* _بازی درون خطی قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:game:d', '> _بازی درون خطی ازاد شد_')
    				lang.set_text(LANG, 'lock:keyboard:f', '> *خطا*\n _کیبورد درون خطی قفل میباشد_')
-   				lang.set_text(LANG, 'lock:keyboard:d', '> _کیبورد درون خطی قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:keyboard:d', '> _کیبورد درون خطی قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:keyboard:f', '> *خطا* _کیبورد درون خطی قفل نبود_')
    				lang.set_text(LANG, 'Unlock:keyboard:d', '> _استفاده از کیبورد درون خطی ازاد شد_')
    				lang.set_text(LANG, 'lock:text:f', '> *خطا*\n _چت کردن قفل میباشد_')
-   				lang.set_text(LANG, 'lock:text:d', '> _چت کردن قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:text:d', '> _چت کردن قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:text:f', '> *خطا* _چت کردن قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:text:d', '> _چت کردن ازاد شد_')
    				lang.set_text(LANG, 'lock:متنarabic:f', '> *خطا*\n _چت کردن عربی قفل میباشد_')
-   				lang.set_text(LANG, 'lock:متنarabic:d', '> _چت کردن عربی قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:متنarabic:d', '> _چت کردن عربی قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:متنarabic:f', '> *خطا* _چت کردن عربی قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:متنarabic:d', '> _چت کردن عربی ازاد شد_')
    				lang.set_text(LANG, 'lock:متنenglish:f', '> *خطا*\n _چت کردن انگلیسی قفل میباشد_')
-   				lang.set_text(LANG, 'lock:متنenglish:d', '> _چت کردن انگلیسی قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:متنenglish:d', '> _چت کردن انگلیسی قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:متنenglish:f', '> *خطا* _چت کردن انگلیسی قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:متنenglish:d', '> _چت کردن انگلیسی ازاد شد_')
    				lang.set_text(LANG, 'lock:arabic:f', '> *خطا*\n _کلمات عربی قفل میباشد_')
-   				lang.set_text(LANG, 'lock:arabic:d', '> _کلمات عربی قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:arabic:d', '> _کلمات عربی قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:arabic:f', '> *خطا* _کلمات عربی قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:arabic:d', '> _کلمات عربی ازاد شد_')
    				lang.set_text(LANG, 'lock:english:f', '> *خطا*\n _کلمات انگلیسی قفل میباشد_')
-   				lang.set_text(LANG, 'lock:english:d', '> _کلمات انگلیسی قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:english:d', '> _کلمات انگلیسی قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:english:f', '> *خطا* _کلمات انگلیسی قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:english:d', '> _کلمات انگلیسی ازاد شد_')
    				lang.set_text(LANG, 'lock:captionarabic:f', '> *خطا*\n _زیرنویس عربی در حال حاضر قفل میباشد_')
-   				lang.set_text(LANG, 'lock:captionarabic:d', '> _زیرنویس عربی قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:captionarabic:d', '> _زیرنویس عربی قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:captionarabic:f', '> *خطا* _زیرنویس عربی قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:captionarabic:d', '> _زیرنویس عربی ازاد شد_')
    				lang.set_text(LANG, 'lock:captionenglish:f', '> *خطا*\n _زیرنویس انگلیسی قفل میباشد_')
-   				lang.set_text(LANG, 'lock:captionenglish:d', '> _ زیرنویس انگلیسی قفل شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:captionenglish:d', '> _ زیرنویس انگلیسی قفل شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:captionenglish:f', '> *خطا* _زیرنویس انگلیسی قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:captionenglish:d', '> _زیرنویس انگلیسی ازاد شد_')
    				lang.set_text(LANG, 'lock:voice:f', '> *خطا*\n _صدا قفل میباشد_')
@@ -280,11 +280,11 @@
    				lang.set_text(LANG, 'Unlock:bots:f', '> *خطا* _ورود ربات ها قفل نمیباشد_')
    				lang.set_text(LANG, 'Unlock:bots:d', '> _ورود ربات ها ازاد شد_')
 				   lang.set_text(LANG, 'lock:APIMOD:f', '> *خطا*\n _APIMode فعال است_')
-   				lang.set_text(LANG, 'lock:APIMOD:d', '> _APIMode فعال شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:APIMOD:d', '> _APIMode فعال شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:APIMOD:f', '> *خطا* _APIMode فعال نیست_')
    				lang.set_text(LANG, 'Unlock:APIMOD:d', '> _APIMode غیر فعال شد_')
    				lang.set_text(LANG, 'lock:SilenMode:f', '> *خطا*\n _حالت سکوت فعال است_')
-   				lang.set_text(LANG, 'lock:SilenMode:d', '> _حالت سکوت فعا شد_\n[این چیست?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:SilenMode:d', '> _حالت سکوت فعا شد_\n[این چیست?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:SilenMode:f', '> *خطا* _حالت سکوت فعال نیست_')
    				lang.set_text(LANG, 'Unlock:SilenMode:d', '> _حالت سکوت غیر فعال شد_')
    				---------------
@@ -297,27 +297,27 @@
                lang.set_text(LANG, 'Cancel', '> لغو')
    				lang.set_text(LANG, 'Canceled', '> لغو شد')
    				lang.set_text(LANG, 'Relang', '> انتخاب دوباره زبان➰')
-   				lang.set_text(LANG, 'Start_TEXT', '> *سلام :)*\n`خوش امدید به QuestionRobot`')
+   				lang.set_text(LANG, 'Start_TEXT', '> *سلام :)*\n`خوش امدید به AntiSpamPlus`')
    				lang.set_text(LANG, 'HelpTXT', '> `از دکمه ها استفاده کنید تا راهنمای هر افزونه را ببینید `')
    				lang.set_text(LANG, 'HelpSupport', '> راهنما و پشتیبانی')
    				lang.set_text(LANG, 'SendChannel', '> ارسال کانال')
    				lang.set_text(LANG, 'Buy:P', '> خرید صفحه')
    				lang.set_text(LANG, 'SendChannel:H', '> `ارسال به کانال`\n'
    					..'> `شما میتوانید از این قابلیت استفاده کنید برای ارسال` *مارک داون* `و` *کیبورد شیشه ای* `به کانال`\n'
-   					..'> `استفاده کنید از` [/SendChannel](t.me/Question_Robot?start=sendchannel) `برای استارت ;)`')
+   					..'> `استفاده کنید از` [/SendChannel](t.me/PrimeHelpBot?start=sendchannel) `برای استارت ;)`')
    				lang.set_text(LANG, 'Upload', '> اپلودر')
    				lang.set_text(LANG, 'Uploader:H', '> `اپلودر فایل`\n'
    					..'> *اپلود* `فایل های شما به سرور و دریافت لینک دانلود`*(تا سقف 1.5GiB)*` ... `\n'
-   					..'> `استفاده کنید از` [/Upload](t.me/Question_Robot?start=upload) `برای شروع ;)`')
+   					..'> `استفاده کنید از` [/Upload](t.me/PrimeHelpBot?start=upload) `برای شروع ;)`')
    				lang.set_text(LANG, 'Download', '> دانلودر')
    				lang.set_text(LANG, 'DownLoader:H', '> `دانلود`\n'
    					..'> *دانلود* `فایل های شما و ارسال ان ها به صورت فایل `*(تا سقف  1.5GiB)*` ... `\n'
-   					..'> `استفاده کنید از` [/Download](t.me/Question_Robot?start=download) `برای شروع ;)`')
+   					..'> `استفاده کنید از` [/Download](t.me/PrimeHelpBot?start=download) `برای شروع ;)`')
    				lang.set_text(LANG, 'GroupBuying', '> خرید گروه')
-   				lang.set_text(LANG, 'Buy:H', '> `گروه های F80`\n'
+   				lang.set_text(LANG, 'Buy:H', '> `گروه های AntiSpamPlus`\n'
    					..'> `خرید یک ربات کلاینت برای مدیریت راحت تر گروه های شما`\n'
    					..'> *از دکمه روبرو استفاده کنید برای پرداخت :D*')
-   				lang.set_text(LANG, 'Buy:N', '> `گروه های F80 `\n'
+   				lang.set_text(LANG, 'Buy:N', '> `گروه های AntiSpamPlus `\n'
    					..'> *اول کلیک کنید* [اینجا](%s) *سپس پرداخت کنید*\n*سپس از دکمه روبرو استفاده کنید*\n'
    					..'> `سپس لینک گروه خود را بفرستید و بقیه کار های مورد نیاز رو انجام دهید ;)`')
    				lang.set_text(LANG, 'Buy:S', '> `طرح مورد نظرتون رو انتخاب کنید :`')
@@ -343,14 +343,14 @@
                lang.set_text(LANG, 'UsNX', '> `از دکمه ها استفاده کنید`')
                lang.set_text(LANG, 'UsNXt', '> `یک پیام از ادمین های گروهتان ارسال کنید`')
                lang.set_text(LANG, 'UserADD', '> `کاربر %s به عنوان ادمین اصلی تنظیم شد`\n*حالا میتوانید از گروه استفاده کنید*\n>شما صاحب گروه هستید :D')
-               lang.set_text(LANG, 'ChS', '[َ](https://storage.pwrtelegram.xyz/Question_RoBot/video/file_540.mp4)> `ارسال کننده کانال فعال شد`\n> *اول من رو ادمین کانال کنین سپس یوزرنیم کانال رو بفرستین*')
+               lang.set_text(LANG, 'ChS', '[َ](https://storage.pwrtelegram.xyz/PrimeHelpBot/video/file_540.mp4)> `ارسال کننده کانال فعال شد`\n> *اول من رو ادمین کانال کنین سپس یوزرنیم کانال رو بفرستین*')
                lang.set_text(LANG, 'UploadS', '> `فایل خود را ارسال کنید <فیلم\\عکس\\فایل>`')
    				lang.set_text(LANG, 'DownLoadS', '> `لینک خود را ارسال کنید <فقط فایل های زیپ>`')
                lang.set_text(LANG, 'Link:H', '> `لینک شما`\n'
-                  ..'> *استفاده کنید از *[/Link](t.me/Question_Robot?start=MyLink) *برای دیدن لینک خود*\n'
+                  ..'> *استفاده کنید از *[/Link](t.me/PrimeHelpBot?start=MyLink) *برای دیدن لینک خود*\n'
                   ..'> `شیر کنید و سکه جمع کنید ...`')
                lang.set_text(LANG, 'Link', '> لینک شما\n'
-                  ..'> t.me/Question_Robot?start=%s \n'
+                  ..'> t.me/PrimeHelpBot?start=%s \n'
                   ..'> پخش کنید و سکه جمع کنید ...')
                lang.set_text(LANG, 'Coins:H', '> `سکه های شما`\n> *شما دارای* : `%d` *باقی مانده هستید*')
                lang.set_text(LANG, 'MyCoinsJ', '> سکه ها')
@@ -381,24 +381,24 @@
                lang.set_text(LANG, 'ColC:H', '> `شما سکه نیاز دارید :P`\n> از دکمه ها استفاده کنید برای اموزش دریافت سکه')
                lang.set_text(LANG, 'ColC', '> دریافت سکه')
                lang.set_text(LANG, 'ShareLink', '> پخش کردن لینک')
-               lang.set_text(LANG, 'NFC', '> سکه ها کم است ... >> بیشتر جمع کنید > [/Link](t.me/Question_Robot?start=MyLink)')
+               lang.set_text(LANG, 'NFC', '> سکه ها کم است ... >> بیشتر جمع کنید > [/Link](t.me/PrimeHelpBotQuestion_Robot?start=MyLink)')
                lang.set_text(LANG, 'InlineHelp', [[
 *راهنمای درون خطی*
 `مترجم` 
-`@Question_Robot tr [متن شما]`
-_مثال_ : `@Question_Robot tr Hello`
+`@PrimeHelpBot tr [متن شما]`
+_مثال_ : `@PrimeHelpBot tr Hello`
 `ترجمه شده را تحویل میدهد` *Hello*
 `مخفی کن` 
-`@Question_Robot مخفی کن your [متن شما]`
-_مثال_ : `@Question_Robot مخفی کن Hello`
+`@PrimeHelpBot مخفی کن your [متن شما]`
+_مثال_ : `@PrimeHelpBot مخفی کن Hello`
 `یک پیام مخفی ارسال میکند`
 `دانلودر` 
-`@Question_Robot download [لینک]`
-_مثال_ : `@Question_Robot download SomeLinks`
+`@PrimeHelpBot download [لینک]`
+_مثال_ : `@PrimeHelpBot download SomeLinks`
 `سپس فایل را از لینک ارسال میکند`
 `سیستم تکرار` 
-`@Question_Robot [متن شما]`
-_مثال_ : `@Question_Robot Hello`
+`@PrimeHelpBot [متن شما]`
+_مثال_ : `@PrimeHelpBot Hello`
 `میفرستد hello`
  `-- میتوانید از مارک داون و html استفاده کنید`
 ]])
@@ -422,17 +422,17 @@ _مثال_ : `@Question_Robot Hello`
                lang.set_text(LANG, 'PY:I', '> پرداخت➰ 💳')
                lang.set_text(LANG, 'PY:T', '> پرداخت 💳')
                lang.set_text(LANG, 'TR:I', '> مترجم➰ 💱')
-               lang.set_text(LANG, 'H:IG:I', '> `دانلودر اینستاگرام`\n\n`<درون خطی>`\n\n*هزینه💰* : `5` SPRs برای عکس ها & `8` SPRs برای ویدیو ها.\n\n> *کاربرد >>*\n\n`@Question_Robot instadownloader لینک اینستای شما`\n\n*مثال* : `@Question_Robot instadownloader https://instagram.com/p/BLuufSdDnwj`\n\n#Good\\_Luck ;)')
+               lang.set_text(LANG, 'H:IG:I', '> `دانلودر اینستاگرام`\n\n`<درون خطی>`\n\n*هزینه💰* : `5` SPRs برای عکس ها & `8` SPRs برای ویدیو ها.\n\n> *کاربرد >>*\n\n`@PrimeHelpBot instadownloader لینک اینستای شما`\n\n*مثال* : `@PrimeHelpBot instadownloader https://instagram.com/p/BLuufSdDnwj`\n\n#Good\\_Luck ;)')
                lang.set_text(LANG, 'H:IG:T', '> `دانلودر اینستاگرام`\n\n*هزینه💰* : `5` SPRs For Photos & `8` SPRs For Videos.\n\n> *کاربرد >>*\n\n`/instadownloader Your InstaLINK`\n\n*مثال* : `/instadownloader https://instagram.com/p/BLuufSdDnwj`\n\n#Good\\_Luck ;)')
-               lang.set_text(LANG, 'H:APK:I', '> `جستجوی apk`\n\n> `<درون خطی>`\n\n*> کاربرد >>*\n\n> `@Question_Robot apksearch <AppName>`\n\n*E.G* : `@Question_Robot apksearch Telegram`')
-               lang.set_text(LANG, 'H:DLR:I', '> `دانلودر`\n\n> `<درون خطی>`\n\n*> کاربرد >>*\n\n> `@Question_Robot download <لینک {فقط فایل های زیپ و پی دی اف}>`\n\n*مثال* : `@Question_Robot download https://telegram.org/Question_RoBot/document/file_570.pdf`')
-               lang.set_text(LANG, 'H:DLR:T', '> `دانلودر`\n\n*> کاربرد >>*\n\n> [/Download](t.me/Question_Robot?start=download)\n\n`سپس لینک خود را ارسال کنید ;)`')
+               lang.set_text(LANG, 'H:APK:I', '> `جستجوی apk`\n\n> `<درون خطی>`\n\n*> کاربرد >>*\n\n> `@PrimeHelpBot apksearch <AppName>`\n\n*E.G* : `@PrimeHelpBot apksearch Telegram`')
+               lang.set_text(LANG, 'H:DLR:I', '> `دانلودر`\n\n> `<درون خطی>`\n\n*> کاربرد >>*\n\n> `@PrimeHelpBot download <لینک {فقط فایل های زیپ و پی دی اف}>`\n\n*مثال* : `@PrimeHelpBot download https://telegram.org/PrimeHelpBot/document/file_570.pdf`')
+               lang.set_text(LANG, 'H:DLR:T', '> `دانلودر`\n\n*> کاربرد >>*\n\n> [/Download](t.me/PrimeHelpBot?start=download)\n\n`سپس لینک خود را ارسال کنید ;)`')
                lang.set_text(LANG, 'H:ECO:T', '> `تکرار`\n\n\n\n*> کاربرد >>*\n\n `/echo متن` <متن Format MarkDown|HTML>\n\n*E.G* : `/echo *Hello*`\n\nراهنمای مارک داون : \\*Bold\\* \n\n- \\_Italic\\_ \n\n- \\`PreCode\\` \n\n- \\[متن](Link) Hyperlink\n\nHTML Help : <b>Bold</b> \n\n- <i>Italic</i> \n\n- <code>PreCode</code> \n\n- <a href="LINK">متن</a> HyperLink')
-               lang.set_text(LANG, 'H:ECO:I', '> `تکرار`\n\n`<درون خطی>`\n\n*> کاربرد >>*\n\n `@Question_Robot echo متن` <متن Format MarkDown|HTML>\n\n*مثال* : `@Question_Robot echo *Hello*`\n\nMarkdown HELP : \\*Bold\\* \n\n- \\_Italic\\_ \n\n- \\`PreCode\\` \n\n- \\[متن]\\(Link) Hyperlink\n\nHTML Help : <b>Bold</b> \n\n- <i>Italic</i> \n\n- <code>PreCode</code> \n\n- <a href="LINK">متن</a> HyperLink')
-               lang.set_text(LANG, 'H:HDT:I', '> `ارسال پیام مخفی`\n\n`<درون خطی>`\n\n*> کاربرد >>*\n `@Question_Robot مخفی کن <متن>`\n\n*E.G* : `@Question_Robot مخفی کن Hello`')
-               lang.set_text(LANG, 'H:PY:I', '> `پرداخت درون خطی`\n\n*> کاربرد >>*\n> `@QuestionRobot pay <Fee <In Tomans>>`\n\n*مثال* : `@Question_Robot pay 10000`\n\n')
+               lang.set_text(LANG, 'H:ECO:I', '> `تکرار`\n\n`<درون خطی>`\n\n*> کاربرد >>*\n\n `@PrimeHelpBot echo متن` <متن Format MarkDown|HTML>\n\n*مثال* : `@PrimeHelpBot echo *Hello*`\n\nMarkdown HELP : \\*Bold\\* \n\n- \\_Italic\\_ \n\n- \\`PreCode\\` \n\n- \\[متن]\\(Link) Hyperlink\n\nHTML Help : <b>Bold</b> \n\n- <i>Italic</i> \n\n- <code>PreCode</code> \n\n- <a href="LINK">متن</a> HyperLink')
+               lang.set_text(LANG, 'H:HDT:I', '> `ارسال پیام مخفی`\n\n`<درون خطی>`\n\n*> کاربرد >>*\n `@PrimeHelpBot مخفی کن <متن>`\n\n*E.G* : `@PrimeHelpBot مخفی کن Hello`')
+               lang.set_text(LANG, 'H:PY:I', '> `پرداخت درون خطی`\n\n*> کاربرد >>*\n> `@PrimeHelpBot pay <Fee <In Tomans>>`\n\n*مثال* : `@PrimeHelpBot pay 10000`\n\n')
                lang.set_text(LANG, 'H:PY:T', '> `پرداخت`\n\n*> کاربرد >>*\n> `/pay <Fee <In Tomans>>`\n\n*E.G* : `/pay 10000`\n\n')
-               lang.set_text(LANG, 'H:TR:I', '> `مترجم درون خطی`\n\n*> کاربرد >>*\n\n> `@Question_Robot translate <متن>`\n\n*E.G* : `@Question_Robot translate <متن>`')
+               lang.set_text(LANG, 'H:TR:I', '> `مترجم درون خطی`\n\n*> کاربرد >>*\n\n> `@PrimeHelpBot translate <متن>`\n\n*E.G* : `@PrimeHelpBot translate <متن>`')
                lang.set_text(LANG, 'Owner', 'مالک اصلی :')
                lang.set_text(LANG, 'list:banned', 'لیست مسدودین :\n')
                lang.set_text(LANG, 'list:bannedE', 'هیچ مسدود شده ای نیست ;) ')
@@ -465,8 +465,8 @@ lang.set_text(LANG, 'filter_egul', ' unfilterd ')
 				   lang.set_text(LANG, 'list:exadminsE', '\n----------------\nthere are No ExtraAdmins')
             	lang.set_text(LANG, 'list:muted', 'Group MutedUsers List :\n')
 				   lang.set_text(LANG, 'list:mutedE', 'there are No MutedUsers ')
-				   lang.set_text(LANG, 'list:sudos', 'F80 Sudoers List :\n')
-				   lang.set_text(LANG, 'list:admins', 'F80 GloballyAdmins List :\n')
+				   lang.set_text(LANG, 'list:sudos', 'AntiSpamPlus Sudoers List :\n')
+				   lang.set_text(LANG, 'list:admins', 'AntiSpamPlus GloballyAdmins List :\n')
 				   lang.set_text(LANG, 'list:bots', 'Group API Bots List :\n')
             	lang.set_text(LANG, 'list:filterd', 'Group FilterdWords List :\n')
 				   lang.set_text(LANG, 'list:filterdE', 'There Are No FilterdWords')
@@ -571,39 +571,39 @@ lang.set_text(LANG, 'filter_egul', ' unfilterd ')
    				lang.set_text(LANG, 'Unlock:edit:f', '> *Error* _Edit Message Text Is not Locked_')
    				lang.set_text(LANG, 'Unlock:edit:d', '> _Edit Message Unlocked_')
    				lang.set_text(LANG, 'lock:pin:f', '> *Error* _Pining a Message is already locked_')
-   				lang.set_text(LANG, 'lock:pin:d', '> _Pinning Messages Locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:pin:d', '> _Pinning Messages Locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:pin:f', '> *Error* _Pinning A Message is not locked_')
    				lang.set_text(LANG, 'Unlock:pin:d', '> _Pinning A Message Unlocked_')
    				lang.set_text(LANG, 'lock:flood:f', '> *Error*\n`>`_Flooding is already Locked..._')
-   				lang.set_text(LANG, 'lock:flood:d', '> _Flooding Hasbeen Locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:flood:d', '> _Flooding Hasbeen Locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:flood:f', '> *Error* _Flood is not Locked_')
    				lang.set_text(LANG, 'Unlock:flood:d', '> _Flooding Unlocked_')
    				lang.set_text(LANG, 'lock:longmessage:f', '> *Error*\n`>`_Sending_ *LongMessage* _More than _: `%d`_ is Already Locked..._')
-   				lang.set_text(LANG, 'lock:longmessage:d', '> _Sending_ *LongMessage* _More than _: `%d`_ hasbeen Locked..._\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:longmessage:d', '> _Sending_ *LongMessage* _More than _: `%d`_ hasbeen Locked..._\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:longmessage:f', '> *Error* _Sending LongMessage is not locked_')
    				lang.set_text(LANG, 'Unlock:longmessage:d', '> _Sending LongMessage Unlocked_')
    				lang.set_text(LANG, 'lock:shortmessage:f', '> *Error*\n`>`_Sending_ *ShortMessage* _Lower than _: `%d`_ is Already Locked..._')
-   				lang.set_text(LANG, 'lock:shortmessage:d', '> _Sending_ *ShortMessage* _Lower than _: `%d`_ hasbeen Locked..._\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:shortmessage:d', '> _Sending_ *ShortMessage* _Lower than _: `%d`_ hasbeen Locked..._\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:shortmessage:f', '> *Error* _Sending ShortMessage is not locked_')
    				lang.set_text(LANG, 'Unlock:shortmessage:d', '> _Sending ShortMessage Unlocked_')
    				lang.set_text(LANG, 'lock:caption:f', '> *Error*\n_Caption is already locked_')
-   				lang.set_text(LANG, 'lock:caption:d', '> _Caption hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:caption:d', '> _Caption hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:caption:f', '> *Error* _Caption Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:caption:d', '> _Caption Unlocked_')
    				lang.set_text(LANG, 'lock:forward:f', '> *Error*\n _Forwarding Message is already locked_')
-   				lang.set_text(LANG, 'lock:forward:d', '> _Forwarding Message hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:forward:d', '> _Forwarding Message hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:forward:f', '> *Error* _Forwarding Message Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:forward:d', '> _Forwarding Message Unlocked_')
    				lang.set_text(LANG, 'lock:channelforward:f', '> *Error*\n _Forwarding Message from Channels is already locked_')
-   				lang.set_text(LANG, 'lock:channelforward:d', '> _Forwarding Message from Channels hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:channelforward:d', '> _Forwarding Message from Channels hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:channelforward:f', '> *Error* _Forwarding Message from Channels Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:channelforward:d', '> _Forwarding Message from Channels Unlocked_')
    				lang.set_text(LANG, 'lock:userforward:f', '> *Error*\n _Forwarding Message from Users(NotChannels) is already locked_')
-   				lang.set_text(LANG, 'lock:userforward:d', '> _Forwarding Message from Users(NotChannels) hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:userforward:d', '> _Forwarding Message from Users(NotChannels) hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:userforward:f', '> *Error* _Forwarding Message from Users(NotChannels) Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:userforward:d', '> _Forwarding Message from Users(NotChannels) Unlocked_')
    				lang.set_text(LANG, 'lock:reply:f', '> *Error*\n _Reply(OnMessages) is already locked_')
-   				lang.set_text(LANG, 'lock:reply:d', '> _Reply(OnMessages) hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:reply:d', '> _Reply(OnMessages) hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:reply:f', '> *Error* _Reply(OnMessages) Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:reply:d', '> _Reply(OnMessages) Unlocked_')
    				lang.set_text(LANG, 'lock:inline:f', '> *Error*\n _Inline(E.g @BOLD) using is already locked_')
@@ -611,39 +611,39 @@ lang.set_text(LANG, 'filter_egul', ' unfilterd ')
    				lang.set_text(LANG, 'Unlock:inline:f', '> *Error* _Inline(E.g @BOLD) using Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:inline:d', '> _Inline(E.g @BOLD) using Unlocked_')
    				lang.set_text(LANG, 'lock:game:f', '> *Error*\n _Inline Game(E.g @Gamee) using is already locked_')
-   				lang.set_text(LANG, 'lock:game:d', '> _Inline Game(E.g @Gamee) using hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:game:d', '> _Inline Game(E.g @Gamee) using hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:game:f', '> *Error* _Inline Game(E.g @Gamee) using Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:game:d', '> _Inline Game(E.g @Gamee) using Unlocked_')
    				lang.set_text(LANG, 'lock:keyboard:f', '> *Error*\n _Inline Keyboard using is already locked_')
-   				lang.set_text(LANG, 'lock:keyboard:d', '> _Inline Keyboard using hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:keyboard:d', '> _Inline Keyboard using hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:keyboard:f', '> *Error* _Inline Keyboard using Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:keyboard:d', '> _Inline Keyboard using Unlocked_')
    				lang.set_text(LANG, 'lock:text:f', '> *Error*\n _Chat is already locked_')
-   				lang.set_text(LANG, 'lock:text:d', '> _Chat hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:text:d', '> _Chat hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:text:f', '> *Error* _Chating Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:text:d', '> _Chat Unlocked_')
    				lang.set_text(LANG, 'lock:textarabic:f', '> *Error*\n _Arabic Chating is already locked_')
-   				lang.set_text(LANG, 'lock:textarabic:d', '> _Arabic Chating hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:textarabic:d', '> _Arabic Chating hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:textarabic:f', '> *Error* _Arabic Chating Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:textarabic:d', '> _Arabic Chating Unlocked_')
    				lang.set_text(LANG, 'lock:textenglish:f', '> *Error*\n _English Chating is already locked_')
-   				lang.set_text(LANG, 'lock:textenglish:d', '> _English Chating hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:textenglish:d', '> _English Chating hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:textenglish:f', '> *Error* _English Chating Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:textenglish:d', '> _English Chating Unlocked_')
    				lang.set_text(LANG, 'lock:arabic:f', '> *Error*\n _Arabic Words is already locked_')
-   				lang.set_text(LANG, 'lock:arabic:d', '> _Arabic Words hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:arabic:d', '> _Arabic Words hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:arabic:f', '> *Error* _Arabic Words Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:arabic:d', '> _Arabic Words Unlocked_')
    				lang.set_text(LANG, 'lock:english:f', '> *Error*\n _English Words is already locked_')
-   				lang.set_text(LANG, 'lock:english:d', '> _English Words hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:english:d', '> _English Words hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:english:f', '> *Error* _English Words Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:english:d', '> _English Words Unlocked_')
    				lang.set_text(LANG, 'lock:captionarabic:f', '> *Error*\n _Arabic Caption is already locked_')
-   				lang.set_text(LANG, 'lock:captionarabic:d', '> _Arabic Caption hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:captionarabic:d', '> _Arabic Caption hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:captionarabic:f', '> *Error* _Arabic Caption Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:captionarabic:d', '> _Arabic Caption Unlocked_')
    				lang.set_text(LANG, 'lock:captionenglish:f', '> *Error*\n _English Caption is already locked_')
-   				lang.set_text(LANG, 'lock:captionenglish:d', '> _English Caption hasbeen locked_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:captionenglish:d', '> _English Caption hasbeen locked_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:captionenglish:f', '> *Error* _English Caption Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:captionenglish:d', '> _English Caption Unlocked_')
    				lang.set_text(LANG, 'lock:voice:f', '> *Error*\n _Voice is Already Locked_')
@@ -707,11 +707,11 @@ lang.set_text(LANG, 'filter_egul', ' unfilterd ')
    				lang.set_text(LANG, 'Unlock:bots:f', '> *Error* _API Bots Wasn\'t locked_')
    				lang.set_text(LANG, 'Unlock:bots:d', '> _API Bots Unlocked_')
 				   lang.set_text(LANG, 'lock:APIMOD:f', '> *Error*\n _APIMode Was Enable_')
-   				lang.set_text(LANG, 'lock:APIMOD:d', '> _APIMode Enabled_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:APIMOD:d', '> _APIMode Enabled_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:APIMOD:f', '> *Error* _APIMode Wasn\'t Enable_')
    				lang.set_text(LANG, 'Unlock:APIMOD:d', '> _APIMode Disabled_')
    				lang.set_text(LANG, 'lock:SilenMode:f', '> *Error*\n _SilentMode Was Enable_')
-   				lang.set_text(LANG, 'lock:SilenMode:d', '> _SilentMode Enabled_\n[Whats That?](t.me/SPRCPU_Help)')
+   				lang.set_text(LANG, 'lock:SilenMode:d', '> _SilentMode Enabled_\n[Whats That?](t.me/PrimeTeam)')
    				lang.set_text(LANG, 'Unlock:SilenMode:f', '> *Error* _SilentMode Wasn\'t Enable_')
    				lang.set_text(LANG, 'Unlock:SilenMode:d', '> _SilentMode Disabled_')
    				---------------
@@ -724,27 +724,27 @@ lang.set_text(LANG, 'filter_egul', ' unfilterd ')
                lang.set_text(LANG, 'Cancel', '> Cancel')
    				lang.set_text(LANG, 'Canceled', '> Action Canceled')
    				lang.set_text(LANG, 'Relang', '> ReSelect Language➰')
-   				lang.set_text(LANG, 'Start_TEXT', '> *Hello :)*\n`Welcome To QuestionRobot`')
+   				lang.set_text(LANG, 'Start_TEXT', '> *Hello :)*\n`Welcome To PrimeHelpBot`')
    				lang.set_text(LANG, 'HelpTXT', '> `Use Buttems to See Each Plugin\'s Help `')
    				lang.set_text(LANG, 'HelpSupport', '> Help & Support')
    				lang.set_text(LANG, 'SendChannel', '> Channel Sending')
    				lang.set_text(LANG, 'Buy:P', '> Buy Page')
    				lang.set_text(LANG, 'SendChannel:H', '> `Send Channel`\n'
    					..'> `You Can Use This Feature To Send` *MarkDown* `And` *GlassKeyboard* `To Your Channel`\n'
-   					..'> `Use` [/SendChannel](t.me/Question_Robot?start=sendchannel) `To Start ;)`')
+   					..'> `Use` [/SendChannel](t.me/PrimeHelpBot?start=sendchannel) `To Start ;)`')
    				lang.set_text(LANG, 'Upload', '> UpLoader')
    				lang.set_text(LANG, 'Uploader:H', '> `FileUploader`\n'
    					..'> *Upload* `Your Files To Our Servers and get A Link For Downloading`*(Up to 1.5GiB)*` ... `\n'
-   					..'> `Use` [/Upload](t.me/Question_Robot?start=upload) `To Start ;)`')
+   					..'> `Use` [/Upload](t.me/PrimeHelpBot?start=upload) `To Start ;)`')
    				lang.set_text(LANG, 'Download', '> DownLoader')
    				lang.set_text(LANG, 'DownLoader:H', '> `Download`\n'
    					..'> *Download* `Your Files To Telegram Servers and Send it as A File `*(Up to 1.5GiB)*` ... `\n'
-   					..'> `Use` [/Download](t.me/Question_Robot?start=download) `To Start ;)`')
+   					..'> `Use` [/Download](t.me/PrimeHelpBot?start=download) `To Start ;)`')
    				lang.set_text(LANG, 'GroupBuying', '> GroupBuying')
-   				lang.set_text(LANG, 'Buy:H', '> `F80 Groups`\n'
+   				lang.set_text(LANG, 'Buy:H', '> `AntiSpamPlus Groups`\n'
    					..'> `Buy A Cli GroupManaget Bot To Manage You Group(s) Easily`\n'
    					..'> *Use Buttem Bellow To Pay And Got The Bot :D*')
-   				lang.set_text(LANG, 'Buy:N', '> `F80 Groups`\n'
+   				lang.set_text(LANG, 'Buy:N', '> `AntiSpamPlus Groups`\n'
    					..'> *First Click* [Here](%s) *Then Pay it*\n*then Use Buttem Bellow*\n'
    					..'> `Then Send You Group Link & Do Other works we need it ;)`')
    				lang.set_text(LANG, 'Buy:S', '> `Select Your Plan :`')
@@ -770,14 +770,14 @@ lang.set_text(LANG, 'filter_egul', ' unfilterd ')
                lang.set_text(LANG, 'UsNX', '> `Use Buttem`')
                lang.set_text(LANG, 'UsNXt', '> `Forward A Message From Your Group Admins`')
                lang.set_text(LANG, 'UserADD', '> `User %s Added As ExtraAdmin`\n*Now You Can Use Your Group*\n>You Are Group Owner :D')
-               lang.set_text(LANG, 'ChS', '[َ](https://storage.pwrtelegram.xyz/Question_RoBot/video/file_540.mp4)> `Channel Sender Enabled`\n> *First Promote Me As Admin to your channel then Send Your Channel username*')
+               lang.set_text(LANG, 'ChS', '[َ](https://storage.pwrtelegram.xyz/PrimeHelpBot/video/file_540.mp4)> `Channel Sender Enabled`\n> *First Promote Me As Admin to your channel then Send Your Channel username*')
                lang.set_text(LANG, 'UploadS', '> `Send Your File <Video\\Photo\\Documents>`')
    				lang.set_text(LANG, 'DownLoadS', '> `SendYour Link <Just ZIP Files>`')
                lang.set_text(LANG, 'Link:H', '> `YourLink`\n'
-                  ..'> *Use *[/Link](t.me/Question_Robot?start=MyLink) *To See Your Link*\n'
+                  ..'> *Use *[/Link](t.me/PrimeHelpBot?start=MyLink) *To See Your Link*\n'
                   ..'> `Share Your Link And Collect Coins ...`')
                lang.set_text(LANG, 'Link', '> YourLink\n'
-                  ..'> t.me/Question_Robot?start=%s \n'
+                  ..'> t.me/PrimeHelpBot?start=%s \n'
                   ..'> Share it And Collect Coins ...')
                lang.set_text(LANG, 'Coins:H', '> `Your Coins`\n> *You have* : `%d` *Coins Left*')
                lang.set_text(LANG, 'MyCoinsJ', '> Coins')
@@ -808,24 +808,24 @@ Tap and hold the message field. When you let go, the paste option will appear. T
                lang.set_text(LANG, 'ColC:H', '> `You need Coins :P`\n> Use Buttems for help in each method for getting coins')
                lang.set_text(LANG, 'ColC', '> Collect Coins')
                lang.set_text(LANG, 'ShareLink', '> LinkSharing')
-               lang.set_text(LANG, 'NFC', '> NotEnogh Coins ... >> Collect more > [/Link](t.me/Question_Robot?start=MyLink)')
+               lang.set_text(LANG, 'NFC', '> NotEnogh Coins ... >> Collect more > [/Link](t.me/PrimeHelpBot?start=MyLink)')
                lang.set_text(LANG, 'InlineHelp', [[
 *Inline Usage Help*
 `Translator` 
-`@Question_Robot tr your text`
-_e.g_ : `@Question_Robot tr Hello`
+`@PrimeHelpBot tr your text`
+_e.g_ : `@PrimeHelpBot tr Hello`
 `Will Return Translated of` *Hello*
 `HideIT` 
-`@Question_Robot hideit your text`
-_e.g_ : `@Question_Robot hideit Hello`
+`@PrimeHelpBot hideit your text`
+_e.g_ : `@PrimeHelpBot hideit Hello`
 `Will send a hidden message`
 `DownLoader` 
-`@Question_Robot download Link`
-_e.g_ : `@Question_Robot download SomeLinks`
+`@PrimeHelpBot download Link`
+_e.g_ : `@PrimeHelpBot download SomeLinks`
 `Will send file of link`
 `Echo System` 
-`@Question_Robot TEXT`
-_e.g_ : `@Question_Robot Hello`
+`@PrimeHelpBot TEXT`
+_e.g_ : `@PrimeHelpBot Hello`
 `Return Hello`
  `-- You Can Use MarkDown Format and HTML Format`
 ]])
@@ -849,17 +849,17 @@ _e.g_ : `@Question_Robot Hello`
                lang.set_text(LANG, 'PY:I', '> Payment➰ 💳')
                lang.set_text(LANG, 'PY:T', '> Payment 💳')
                lang.set_text(LANG, 'TR:I', '> Translator➰ 💱')
-               lang.set_text(LANG, 'H:IG:I', '> `Instagram Downloader`\n\n`<Inline Mode>`\n\n*Cost💰* : `5` SPRs For Photos & `8` SPRs For Videos.\n\n> *Usage >>*\n\n`@Question_Robot instadownloader Your InstaLINK`\n\n*E.G* : `@Question_Robot instadownloader https://instagram.com/p/BLuufSdDnwj`\n\n#Good\\_Luck ;)')
+               lang.set_text(LANG, 'H:IG:I', '> `Instagram Downloader`\n\n`<Inline Mode>`\n\n*Cost💰* : `5` SPRs For Photos & `8` SPRs For Videos.\n\n> *Usage >>*\n\n`@PrimeHelpBot instadownloader Your InstaLINK`\n\n*E.G* : `@PrimeHelpBot instadownloader https://instagram.com/p/BLuufSdDnwj`\n\n#Good\\_Luck ;)')
                lang.set_text(LANG, 'H:IG:T', '> `Instagram Downloader`\n\n*Cost💰* : `5` SPRs For Photos & `8` SPRs For Videos.\n\n> *Usage >>*\n\n`/instadownloader Your InstaLINK`\n\n*E.G* : `/instadownloader https://instagram.com/p/BLuufSdDnwj`\n\n#Good\\_Luck ;)')
-               lang.set_text(LANG, 'H:APK:I', '> `ApkSearcher`\n\n> `<Inline Mode>`\n\n*> Usage >>*\n\n> `@Question_Robot apksearch <AppName>`\n\n*E.G* : `@Question_Robot apksearch Telegram`')
-               lang.set_text(LANG, 'H:DLR:I', '> `Downloader`\n\n> `<Inline Mode>`\n\n*> Usage >>*\n\n> `@Question_Robot download <Link {Just ZIP & PDF Files}>`\n\n*E.G* : `@Question_Robot download https://telegram.org/Question_RoBot/document/file_570.pdf`')
-               lang.set_text(LANG, 'H:DLR:T', '> `Downloader`\n\n*> Usage >>*\n\n> [/Download](t.me/Question_Robot?start=download)\n\n`Then Send Your link ;)`')
+               lang.set_text(LANG, 'H:APK:I', '> `ApkSearcher`\n\n> `<Inline Mode>`\n\n*> Usage >>*\n\n> `@PrimeHelpBot apksearch <AppName>`\n\n*E.G* : `@PrimeHelpBot apksearch Telegram`')
+               lang.set_text(LANG, 'H:DLR:I', '> `Downloader`\n\n> `<Inline Mode>`\n\n*> Usage >>*\n\n> `@PrimeHelpBot download <Link {Just ZIP & PDF Files}>`\n\n*E.G* : `@PrimeHelpBot download https://telegram.org/PrimeHelpBot/document/file_570.pdf`')
+               lang.set_text(LANG, 'H:DLR:T', '> `Downloader`\n\n*> Usage >>*\n\n> [/Download](t.me/PrimeHelpBot?start=download)\n\n`Then Send Your link ;)`')
                lang.set_text(LANG, 'H:ECO:T', '> `Echo`\n\n\n\n*> Usage >>*\n\n `/Echo TEXT` <TEXT Format MarkDown|HTML>\n\n*E.G* : `/Echo *Hello*`\n\nMarkdown HELP : \\*Bold\\* \n\n- \\_Italic\\_ \n\n- \\`PreCode\\` \n\n- \\[TEXT](Link) Hyperlink\n\nHTML Help : <b>Bold</b> \n\n- <i>Italic</i> \n\n- <code>PreCode</code> \n\n- <a href="LINK">TEXT</a> HyperLink')
-               lang.set_text(LANG, 'H:ECO:I', '> `Echo`\n\n`<Inline Mode>`\n\n*> Usage >>*\n\n `@Question_Robot echo TEXT` <TEXT Format MarkDown|HTML>\n\n*E.G* : `@Question_Robot echo *Hello*`\n\nMarkdown HELP : \\*Bold\\* \n\n- \\_Italic\\_ \n\n- \\`PreCode\\` \n\n- \\[TEXT]\\(Link) Hyperlink\n\nHTML Help : <b>Bold</b> \n\n- <i>Italic</i> \n\n- <code>PreCode</code> \n\n- <a href="LINK">TEXT</a> HyperLink')
-               lang.set_text(LANG, 'H:HDT:I', '> `SendHidden Message`\n\n`<Inline Mode>`\n\n*> Usage >>*\n `@Question_Robot hideit <Text>`\n\n*E.G* : `@Question_Robot hideit Hello`')
-               lang.set_text(LANG, 'H:PY:I', '> `Inline Payment`\n\n*> Usage >>*\n> `@QuestionRobot pay <Fee <In Tomans>>`\n\n*E.G* : `@Question_Robot pay 10000`\n\n')
+               lang.set_text(LANG, 'H:ECO:I', '> `Echo`\n\n`<Inline Mode>`\n\n*> Usage >>*\n\n `@PrimeHelpBot echo TEXT` <TEXT Format MarkDown|HTML>\n\n*E.G* : `@PrimeHelpBot echo *Hello*`\n\nMarkdown HELP : \\*Bold\\* \n\n- \\_Italic\\_ \n\n- \\`PreCode\\` \n\n- \\[TEXT]\\(Link) Hyperlink\n\nHTML Help : <b>Bold</b> \n\n- <i>Italic</i> \n\n- <code>PreCode</code> \n\n- <a href="LINK">TEXT</a> HyperLink')
+               lang.set_text(LANG, 'H:HDT:I', '> `SendHidden Message`\n\n`<Inline Mode>`\n\n*> Usage >>*\n `@PrimeHelpBot hideit <Text>`\n\n*E.G* : `@PrimeHelpBot hideit Hello`')
+               lang.set_text(LANG, 'H:PY:I', '> `Inline Payment`\n\n*> Usage >>*\n> `@PrimeHelpBot pay <Fee <In Tomans>>`\n\n*E.G* : `@PrimeHelpBot pay 10000`\n\n')
                lang.set_text(LANG, 'H:PY:T', '> `Payment`\n\n*> Usage >>*\n> `/pay <Fee <In Tomans>>`\n\n*E.G* : `/pay 10000`\n\n')
-               lang.set_text(LANG, 'H:TR:I', '> `Inline Translator`\n\n*> Usage >>*\n\n> `@Question_Robot translate <TEXT>`\n\n*E.G* : `@Question_Robot translate <TEXT>`')
+               lang.set_text(LANG, 'H:TR:I', '> `Inline Translator`\n\n*> Usage >>*\n\n> `@PrimeHelpBot translate <TEXT>`\n\n*E.G* : `@PrimeHelpBot translate <TEXT>`')
 
 
           	cli.sendText(msg.chat_id_, msg.id_, 0, 0, nil, '> *Down*\n> `English Database Updated`', 0, 'MarkDown')
