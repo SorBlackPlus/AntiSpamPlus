@@ -251,8 +251,8 @@ function Run(msg, matches)
 	    },
 	    --
 	    {
-	        {text = "OurChannel🙄", url = 't.me/sprcpu_company'},
-	        {text = "Support🙄", url = 't.me/Question_Robot?start=Support'},
+	        {text = "OurChannel🙄", url = 't.me/PrimeTean'},
+	        {text = "Support🙄", url = 't.me/PmSorBlackBot'},
         }
     	}
     api.editMessageText(chat_id, msg.message.message_id, text, 'md', keyboard)
